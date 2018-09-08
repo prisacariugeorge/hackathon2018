@@ -16,9 +16,12 @@ class RecommendationCell: UITableViewCell {
     @IBOutlet var currentPrice: UILabel!
     
     public func setupWithProduct(_ product: Product) {
-        self.titleLabel.text = product.productName ?? ""
-        self.productImageView.image = product.image
-        self.ratingImageView.image = self.getRatingImage(product.rating!)
+        self.titleLabel.text = product.productName
+        self.productImageView.image = UIImage(data: product.imageData)
+        self.ratingImageView.image = self.getRatingImage(product.rating)
+        self.oldPrice.text = String(product.oldPrice)
+        
+        self.currentPrice.text = String(product.currentPrice)
     }
     
     func getRatingImage(_ rating: Int) -> UIImage? {

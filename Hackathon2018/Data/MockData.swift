@@ -8,38 +8,55 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 extension ViewControllerVC {
-    func getRecommendation() -> [Recommendation] {
+    func getProducts(_ products: Results<Product>?) -> [Recommendation] {
         var returnRecommendation = [Recommendation]()
-        
-        let product1 = Product()
-        product1.productName = "test a"
-        product1.rating = 4
-        product1.image = #imageLiteral(resourceName: "copiiMici")
-        
-        let product2 = Product()
-        product2.productName = "test second"
-        product2.rating = 3
-        product2.image = #imageLiteral(resourceName: "youthFinder")
-        
-        let product3 = Product()
-        product3.productName = "test third"
-        product3.rating = 5
-        product3.image = #imageLiteral(resourceName: "womanFinder")
-        
-        let product4 = Product()
-        product4.productName = "test new"
-        product4.rating = 1
-        product4.image = #imageLiteral(resourceName: "menFinder")
-        
         let recommendation1 = Recommendation()
-        recommendation1.products = [product1, product2, product3, product4]
+        var productsRec = [Product]()
+        if let products = products {
+            for value in products {
+                productsRec.append(value)
+            }
+        }
+        
+        recommendation1.products = productsRec
         
         returnRecommendation.append(recommendation1)
         
         return returnRecommendation
     }
+//    func getRecommendation() -> [Recommendation] {
+//        var returnRecommendation = [Recommendation]()
+//        
+//        let product1 = Product()
+//        product1.productName = "test a"
+//        product1.rating = 4
+//        product1.image = #imageLiteral(resourceName: "copiiMici")
+//        
+//        let product2 = Product()
+//        product2.productName = "test second"
+//        product2.rating = 3
+//        product2.image = #imageLiteral(resourceName: "youthFinder")
+//        
+//        let product3 = Product()
+//        product3.productName = "test third"
+//        product3.rating = 5
+//        product3.image = #imageLiteral(resourceName: "womanFinder")
+//        
+//        let product4 = Product()
+//        product4.productName = "test new"
+//        product4.rating = 1
+//        product4.image = #imageLiteral(resourceName: "menFinder")
+//        
+//        let recommendation1 = Recommendation()
+//        recommendation1.products = [product1, product2, product3, product4]
+//        
+//        returnRecommendation.append(recommendation1)
+//        
+//        return returnRecommendation
+//    }
     
     func getFinders() -> [Finder] {
         var returnFinders = [Finder]()

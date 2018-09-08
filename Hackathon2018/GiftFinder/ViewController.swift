@@ -9,6 +9,7 @@
 import UIKit
 import RxDataSources
 import RxSwift
+import RealmSwift
 
 @objcMembers
 class ViewControllerVC: UIViewController {
@@ -19,21 +20,51 @@ class ViewControllerVC: UIViewController {
     var disposeBag = DisposeBag()
     var tvAnimatedDataSource: RxTableViewSectionedAnimatedDataSource<GiftFinderSection>!
     
+    var realm: Realm? = nil
+    var items: Results<Product>? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mockInit()
+//        self.mockInit()
         self.tableView.register(UINib(nibName: "RecommendationCell", bundle: nil), forCellReuseIdentifier: "RecommendationCell")
         self.tableView.register(UINib(nibName: "FinderTVCell", bundle: nil), forCellReuseIdentifier: "FinderTVCell")
 
         
         self.configureDataSource()
         
-        self.viewModel.dataSource
-            .asObservable()
-            .subscribeOn(MainScheduler.instance)
-            .bind(to: tableView.rx.items(dataSource: self.tvAnimatedDataSource))
-            .disposed(by: disposeBag)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        title = "Welcome"
+        
+        if let _ = SyncUser.current {
+            // We have already logged in here!
+            self.mockInit()
+        } else {
+            let alertController = UIAlertController(title: "Login to Realm Cloud", message: "Supply a nice nickname!", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Login", style: .default, handler: { [unowned self]
+                alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let creds = SyncCredentials.nickname(textField.text!, isAdmin: true)
+                
+                SyncUser.logIn(with: creds, server: Constants.AUTH_URL, onCompletion: { [weak self](user, err) in
+                    if let _ = user {
+                        self?.mockInit()
+                    } else if let error = err {
+                        fatalError(error.localizedDescription)
+                    }
+                })
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alertController.addTextField(configurationHandler: {(textField : UITextField!) -> Void in
+                textField.placeholder = "A Name for your user"
+            })
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,9 +73,21 @@ class ViewControllerVC: UIViewController {
     }
     
     private func mockInit() {
-        let giftFinderDTO = GiftFinderDTO(recommendations: self.getRecommendation(), finders: self.getFinders())
+        
+        let syncConfig = SyncConfiguration(user: SyncUser.current!, realmURL: Constants.REALM_URL)
+        self.realm = try? Realm(configuration: Realm.Configuration(syncConfiguration: syncConfig, objectTypes:[Product.self]))
+        self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
+        
+        let giftFinderDTO = GiftFinderDTO(recommendations: self.getProducts(self.items), finders: self.getFinders())
         let viewModel = GiftFinderVM(giftFinderDTO: giftFinderDTO)
         self.viewModel = viewModel
+        
+        
+        self.viewModel.dataSource
+            .asObservable()
+            .subscribeOn(MainScheduler.instance)
+            .bind(to: tableView.rx.items(dataSource: self.tvAnimatedDataSource))
+            .disposed(by: disposeBag)
     }
 }
 
