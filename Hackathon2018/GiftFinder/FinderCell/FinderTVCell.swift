@@ -6,12 +6,18 @@
 //  Copyright © 2018 Marian Prisacariu. All rights reserved.
 //
 
+@objc protocol FinderTVCellDelegate {
+    func finderTVCellDelegateDidSelectFinder(_ finder: Finder)
+}
+
 import UIKit
 
 class FinderTVCell: UITableViewCell {
     @IBOutlet var collectionView: UICollectionView!
     
     var finders: [Finder] = []
+    
+    weak var delegate: FinderTVCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -57,6 +63,7 @@ UICollectionViewDelegateFlowLayout {
         }
         let finder: Finder = self.finders[indexPath.row]
         finder.enlarge = true
+        self.delegate?.finderTVCellDelegateDidSelectFinder(finder)
         collectionView.reloadData()
     }
 }

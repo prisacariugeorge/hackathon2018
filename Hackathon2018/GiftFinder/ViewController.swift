@@ -120,9 +120,16 @@ extension ViewControllerVC {
     fileprivate func finderCellFor(finders: [Finder], atIndexPath indexPath: IndexPath) -> UITableViewCell {
         if let cell = self.tableView.dequeueReusableCell(withIdentifier: "FinderTVCell", for: indexPath) as? FinderTVCell {
             cell.setupWithFinders(finders)
+            cell.delegate = self
             return cell
         } else {
             return UITableViewCell()
         }
+    }
+}
+
+extension ViewControllerVC: FinderTVCellDelegate {
+    func finderTVCellDelegateDidSelectFinder(_ finder: Finder) {
+        print("finder \(finder.name)")
     }
 }
