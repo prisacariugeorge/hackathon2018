@@ -6,7 +6,7 @@
 //  Copyright © 2018 Marian Prisacariu. All rights reserved.
 //
 
-@objc protocol FinderTVCellDelegate {
+protocol FinderTVCellDelegate {
     func finderTVCellDelegateDidSelectFinder(_ finder: Finder)
 }
 
@@ -17,7 +17,7 @@ class FinderTVCell: UITableViewCell {
     
     var finders: [Finder] = []
     
-    weak var delegate: FinderTVCellDelegate?
+    var delegate: FinderTVCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()

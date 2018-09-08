@@ -15,7 +15,7 @@ class GiftFinderVM: NSObject {
     
     var giftFinderDTO = Variable<GiftFinderDTO>(GiftFinderDTO())
     
-    var recommendations: [Recommendation] = []
+    var products: [Product] = []
     
     var dataSource = Variable<[GiftFinderSection]>([])
     
@@ -49,26 +49,21 @@ class GiftFinderVM: NSObject {
             returnDataSource.append(giftFinderSection)
         }
         
-        if let recommendations = giftFinderDTO.recommendations {
+        if let products = giftFinderDTO.products {
             let finderSection = GiftFinderSection(name: "Recommendation",
-                                                  elements: self.recommendationItemsFor(recommendations))
+                                                  elements: self.recommendationItemsFor(products))
             returnDataSource.append(finderSection)
         }
         return  returnDataSource
     }
     
-    func recommendationItemsFor(_ recommendations: [Recommendation]) -> [GiftFinderItem] {
+    func recommendationItemsFor(_ products: [Product]) -> [GiftFinderItem] {
         var recommendationItems = [GiftFinderItem]()
-        for recommendation in recommendations {
-            if let products = recommendation.products {
-                for value in products {
-                    let gridCell = GiftFinderItem(type: .recommendationCell,
-                                                  data: value)
-                    recommendationItems.append(gridCell)
-                }
-            }
+        for value in products {
+            let gridCell = GiftFinderItem(type: .recommendationCell,
+                                          data: value)
+            recommendationItems.append(gridCell)
         }
-        
         return recommendationItems
     }
     
@@ -81,21 +76,21 @@ class GiftFinderVM: NSObject {
 
 
 @objcMembers public class GiftFinderDTO: NSObject, NSCopying {
-    var recommendations: [Recommendation]?
+    var products: [Product]?
     var finders: [Finder]?
     var context: AnyObject?
     
     public override init() {}
     
-    convenience init(recommendations: [Recommendation], finders: [Finder]) {
+    convenience init(products: [Product], finders: [Finder]) {
         self.init()
-        self.recommendations = recommendations
+        self.products = products
         self.finders = finders
     }
     
     public func copy(with zone: NSZone? = nil) -> Any {
         let copy = GiftFinderDTO()
-        copy.recommendations = recommendations
+        copy.products = products
         copy.finders = finders
         return copy
     }
@@ -160,7 +155,7 @@ struct GiftFinderItem: IdentifiableType, Equatable {
     }
     
     var identity: String {
-        return ")"
+        return "\(arc4random_uniform(999)) \(arc4random_uniform(999)) \(arc4random_uniform(999))"
     }
     
     static func == (lhs: GiftFinderItem, rhs: GiftFinderItem) -> Bool {

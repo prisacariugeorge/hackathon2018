@@ -26,14 +26,10 @@ class ViewControllerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.mockInit()
         self.tableView.register(UINib(nibName: "RecommendationCell", bundle: nil), forCellReuseIdentifier: "RecommendationCell")
         self.tableView.register(UINib(nibName: "FinderTVCell", bundle: nil), forCellReuseIdentifier: "FinderTVCell")
 
-        
         self.configureDataSource()
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,7 +37,6 @@ class ViewControllerVC: UIViewController {
         title = "Welcome"
         
         if let _ = SyncUser.current {
-            // We have already logged in here!
             self.mockInit()
         } else {
             let alertController = UIAlertController(title: "Login to Realm Cloud", message: "Supply a nice nickname!", preferredStyle: .alert)
@@ -73,15 +68,13 @@ class ViewControllerVC: UIViewController {
     }
     
     private func mockInit() {
-        
         let syncConfig = SyncConfiguration(user: SyncUser.current!, realmURL: Constants.REALM_URL)
         self.realm = try? Realm(configuration: Realm.Configuration(syncConfiguration: syncConfig, objectTypes:[Product.self]))
         self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
         
-        let giftFinderDTO = GiftFinderDTO(recommendations: self.getProducts(self.items), finders: self.getFinders())
-        let viewModel = GiftFinderVM(giftFinderDTO: giftFinderDTO)
+        let giftFinderDTO = GiftFinderDTO(products: self.getProducts(self.items), finders: self.getFinders())
+        var viewModel = GiftFinderVM(giftFinderDTO: giftFinderDTO)
         self.viewModel = viewModel
-        
         
         self.viewModel.dataSource
             .asObservable()
@@ -130,6 +123,15 @@ extension ViewControllerVC {
 
 extension ViewControllerVC: FinderTVCellDelegate {
     func finderTVCellDelegateDidSelectFinder(_ finder: Finder) {
-        print("finder \(finder.name)")
+        self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
+        
+        let giftFinderDTO = GiftFinderDTO(products: self.getProducts(self.items), finders: self.getFinders())
+        if finder.name == "Men" {
+            giftFinderDTO.products = self.getProducts(self.items).filter { $0.sectionType == 1 }
+        } else if finder.name == "Woman" {
+            giftFinderDTO.products = self.getProducts(self.items).filter { $0.sectionType == 2 }
+        }
+        
+        self.viewModel.giftFinderDTO.value = giftFinderDTO
     }
 }
