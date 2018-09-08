@@ -12,6 +12,17 @@
 		564E1B2A214405D800FFC7B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564E1B28214405D800FFC7B3 /* Main.storyboard */; };
 		564E1B2C214405DA00FFC7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564E1B2B214405DA00FFC7B3 /* Assets.xcassets */; };
 		564E1B2F214405DA00FFC7B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564E1B2D214405DA00FFC7B3 /* LaunchScreen.storyboard */; };
+		564E1B372144097F00FFC7B3 /* GiftFinderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B362144097F00FFC7B3 /* GiftFinderVM.swift */; };
+		564E1B3A21440CE000FFC7B3 /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B3821440CE000FFC7B3 /* RecommendationCell.swift */; };
+		564E1B3B21440CE000FFC7B3 /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564E1B3921440CE000FFC7B3 /* RecommendationCell.xib */; };
+		564E1B40214411D600FFC7B3 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B3F214411D600FFC7B3 /* Classes.swift */; };
+		564E1B422144137900FFC7B3 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B412144137900FFC7B3 /* MockData.swift */; };
+		564E1B4C214418E900FFC7B3 /* FinderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B4A214418E900FFC7B3 /* FinderTVCell.swift */; };
+		564E1B4D214418E900FFC7B3 /* FinderTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564E1B4B214418E900FFC7B3 /* FinderTVCell.xib */; };
+		564E1B5021441CF200FFC7B3 /* FinderCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B4E21441CF200FFC7B3 /* FinderCVCell.swift */; };
+		564E1B5121441CF200FFC7B3 /* FinderCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564E1B4F21441CF200FFC7B3 /* FinderCVCell.xib */; };
+		564E1B532144408800FFC7B3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B522144408800FFC7B3 /* Reusable.swift */; };
+		A143C6F06596AA43B671D788 /* Pods_Hackathon2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D5C98AB653013501853110 /* Pods_Hackathon2018.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +33,19 @@
 		564E1B2B214405DA00FFC7B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		564E1B2E214405DA00FFC7B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		564E1B30214405DA00FFC7B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		564E1B362144097F00FFC7B3 /* GiftFinderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftFinderVM.swift; sourceTree = "<group>"; };
+		564E1B3821440CE000FFC7B3 /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
+		564E1B3921440CE000FFC7B3 /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
+		564E1B3F214411D600FFC7B3 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		564E1B412144137900FFC7B3 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		564E1B4A214418E900FFC7B3 /* FinderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderTVCell.swift; sourceTree = "<group>"; };
+		564E1B4B214418E900FFC7B3 /* FinderTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinderTVCell.xib; sourceTree = "<group>"; };
+		564E1B4E21441CF200FFC7B3 /* FinderCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderCVCell.swift; sourceTree = "<group>"; };
+		564E1B4F21441CF200FFC7B3 /* FinderCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinderCVCell.xib; sourceTree = "<group>"; };
+		564E1B522144408800FFC7B3 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		8B9D991A2DA51D31611C39EC /* Pods-Hackathon2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018.debug.xcconfig"; sourceTree = "<group>"; };
+		C3D5C98AB653013501853110 /* Pods_Hackathon2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC049458C52C0F79463A2E0A /* Pods-Hackathon2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A143C6F06596AA43B671D788 /* Pods_Hackathon2018.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4C4753D50A85DB1132D77D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3D5C98AB653013501853110 /* Pods_Hackathon2018.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		564E1B18214405D800FFC7B3 = {
 			isa = PBXGroup;
 			children = (
 				564E1B23214405D800FFC7B3 /* Hackathon2018 */,
 				564E1B22214405D800FFC7B3 /* Products */,
+				69DDF1C5B8B0FAB439E641D2 /* Pods */,
+				2F4C4753D50A85DB1132D77D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +89,81 @@
 		564E1B23214405D800FFC7B3 /* Hackathon2018 */ = {
 			isa = PBXGroup;
 			children = (
-				564E1B24214405D800FFC7B3 /* AppDelegate.swift */,
-				564E1B26214405D800FFC7B3 /* ViewController.swift */,
+				564E1B452144158000FFC7B3 /* AppDelegate */,
+				564E1B462144158E00FFC7B3 /* GiftFinder */,
+				564E1B432144156A00FFC7B3 /* Data */,
+				564E1B442144157700FFC7B3 /* UI */,
+				564E1B30214405DA00FFC7B3 /* Info.plist */,
+				564E1B522144408800FFC7B3 /* Reusable.swift */,
+			);
+			path = Hackathon2018;
+			sourceTree = "<group>";
+		};
+		564E1B3C21440CEB00FFC7B3 /* RecommendationCell */ = {
+			isa = PBXGroup;
+			children = (
+				564E1B3821440CE000FFC7B3 /* RecommendationCell.swift */,
+				564E1B3921440CE000FFC7B3 /* RecommendationCell.xib */,
+			);
+			path = RecommendationCell;
+			sourceTree = "<group>";
+		};
+		564E1B432144156A00FFC7B3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				564E1B412144137900FFC7B3 /* MockData.swift */,
+				564E1B3F214411D600FFC7B3 /* Classes.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		564E1B442144157700FFC7B3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
 				564E1B28214405D800FFC7B3 /* Main.storyboard */,
 				564E1B2B214405DA00FFC7B3 /* Assets.xcassets */,
 				564E1B2D214405DA00FFC7B3 /* LaunchScreen.storyboard */,
-				564E1B30214405DA00FFC7B3 /* Info.plist */,
 			);
-			path = Hackathon2018;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		564E1B452144158000FFC7B3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				564E1B24214405D800FFC7B3 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		564E1B462144158E00FFC7B3 /* GiftFinder */ = {
+			isa = PBXGroup;
+			children = (
+				564E1B26214405D800FFC7B3 /* ViewController.swift */,
+				564E1B47214418C000FFC7B3 /* FinderCell */,
+				564E1B3C21440CEB00FFC7B3 /* RecommendationCell */,
+				564E1B362144097F00FFC7B3 /* GiftFinderVM.swift */,
+			);
+			path = GiftFinder;
+			sourceTree = "<group>";
+		};
+		564E1B47214418C000FFC7B3 /* FinderCell */ = {
+			isa = PBXGroup;
+			children = (
+				564E1B4A214418E900FFC7B3 /* FinderTVCell.swift */,
+				564E1B4B214418E900FFC7B3 /* FinderTVCell.xib */,
+				564E1B4E21441CF200FFC7B3 /* FinderCVCell.swift */,
+				564E1B4F21441CF200FFC7B3 /* FinderCVCell.xib */,
+			);
+			path = FinderCell;
+			sourceTree = "<group>";
+		};
+		69DDF1C5B8B0FAB439E641D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B9D991A2DA51D31611C39EC /* Pods-Hackathon2018.debug.xcconfig */,
+				FC049458C52C0F79463A2E0A /* Pods-Hackathon2018.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 564E1B33214405DA00FFC7B3 /* Build configuration list for PBXNativeTarget "Hackathon2018" */;
 			buildPhases = (
+				B01E07EB205176307BACF367 /* [CP] Check Pods Manifest.lock */,
 				564E1B1D214405D800FFC7B3 /* Sources */,
 				564E1B1E214405D800FFC7B3 /* Frameworks */,
 				564E1B1F214405D800FFC7B3 /* Resources */,
+				BEAA332117D020815E0D5096 /* [CP] Embed Pods Frameworks */,
+				4574B1EEF5A416BF5FCA56B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,6 +227,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564E1B4D214418E900FFC7B3 /* FinderTVCell.xib in Resources */,
+				564E1B3B21440CE000FFC7B3 /* RecommendationCell.xib in Resources */,
+				564E1B5121441CF200FFC7B3 /* FinderCVCell.xib in Resources */,
 				564E1B2F214405DA00FFC7B3 /* LaunchScreen.storyboard in Resources */,
 				564E1B2C214405DA00FFC7B3 /* Assets.xcassets in Resources */,
 				564E1B2A214405D800FFC7B3 /* Main.storyboard in Resources */,
@@ -130,12 +238,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4574B1EEF5A416BF5FCA56B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B01E07EB205176307BACF367 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hackathon2018-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEAA332117D020815E0D5096 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		564E1B1D214405D800FFC7B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564E1B3A21440CE000FFC7B3 /* RecommendationCell.swift in Sources */,
+				564E1B422144137900FFC7B3 /* MockData.swift in Sources */,
+				564E1B40214411D600FFC7B3 /* Classes.swift in Sources */,
+				564E1B532144408800FFC7B3 /* Reusable.swift in Sources */,
+				564E1B372144097F00FFC7B3 /* GiftFinderVM.swift in Sources */,
+				564E1B4C214418E900FFC7B3 /* FinderTVCell.swift in Sources */,
 				564E1B27214405D800FFC7B3 /* ViewController.swift in Sources */,
+				564E1B5021441CF200FFC7B3 /* FinderCVCell.swift in Sources */,
 				564E1B25214405D800FFC7B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,14 +457,12 @@
 		};
 		564E1B34214405DA00FFC7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B9D991A2DA51D31611C39EC /* Pods-Hackathon2018.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Hackathon2018/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eMAG.Hackathon2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -295,14 +472,12 @@
 		};
 		564E1B35214405DA00FFC7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC049458C52C0F79463A2E0A /* Pods-Hackathon2018.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Hackathon2018/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eMAG.Hackathon2018;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
