@@ -8,6 +8,8 @@
 
 protocol FinderTVCellDelegate {
     func finderTVCellDelegateDidSelectFinder(_ finder: Finder)
+    func finderTVCellDelegateDidSelectCategory()
+    func finderTVCellDelegateDidSelectPrice()
 }
 
 import UIKit
@@ -28,6 +30,13 @@ class FinderTVCell: UITableViewCell {
     func setupWithFinders(_ finders: [Finder]) {
         self.finders = finders
         self.collectionView.reloadData()
+    }
+    
+    @IBAction func categoryButtonPressed(_ sender: Any) {
+        self.delegate?.finderTVCellDelegateDidSelectCategory()
+    }
+    @IBAction func priceButtonPressed(_ sender: Any) {
+        self.delegate?.finderTVCellDelegateDidSelectPrice()
     }
 }
 

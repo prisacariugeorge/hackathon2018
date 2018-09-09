@@ -23,6 +23,7 @@
 		564E1B5121441CF200FFC7B3 /* FinderCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564E1B4F21441CF200FFC7B3 /* FinderCVCell.xib */; };
 		564E1B532144408800FFC7B3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B522144408800FFC7B3 /* Reusable.swift */; };
 		564E1B552144571700FFC7B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B542144571700FFC7B3 /* Constants.swift */; };
+		56C32A772144CE57009A2794 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C32A762144CE57009A2794 /* FilterViewController.swift */; };
 		A143C6F06596AA43B671D788 /* Pods_Hackathon2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D5C98AB653013501853110 /* Pods_Hackathon2018.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		564E1B4F21441CF200FFC7B3 /* FinderCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinderCVCell.xib; sourceTree = "<group>"; };
 		564E1B522144408800FFC7B3 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		564E1B542144571700FFC7B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		56C32A762144CE57009A2794 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		8B9D991A2DA51D31611C39EC /* Pods-Hackathon2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018.debug.xcconfig"; sourceTree = "<group>"; };
 		C3D5C98AB653013501853110 /* Pods_Hackathon2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC049458C52C0F79463A2E0A /* Pods-Hackathon2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				564E1B47214418C000FFC7B3 /* FinderCell */,
 				564E1B3C21440CEB00FFC7B3 /* RecommendationCell */,
 				564E1B362144097F00FFC7B3 /* GiftFinderVM.swift */,
+				56C32A762144CE57009A2794 /* FilterViewController.swift */,
 			);
 			path = GiftFinder;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				564E1B40214411D600FFC7B3 /* Classes.swift in Sources */,
 				564E1B532144408800FFC7B3 /* Reusable.swift in Sources */,
 				564E1B372144097F00FFC7B3 /* GiftFinderVM.swift in Sources */,
+				56C32A772144CE57009A2794 /* FilterViewController.swift in Sources */,
 				564E1B552144571700FFC7B3 /* Constants.swift in Sources */,
 				564E1B4C214418E900FFC7B3 /* FinderTVCell.swift in Sources */,
 				564E1B27214405D800FFC7B3 /* ViewController.swift in Sources */,
@@ -465,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M56ZK97CCQ;
 				INFOPLIST_FILE = Hackathon2018/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -483,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M56ZK97CCQ;
 				INFOPLIST_FILE = Hackathon2018/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -30,12 +30,16 @@ class ViewControllerVC: UIViewController {
         self.tableView.register(UINib(nibName: "FinderTVCell", bundle: nil), forCellReuseIdentifier: "FinderTVCell")
 
         self.configureDataSource()
+        self.configureRealm()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        title = "Welcome"
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    
+    private func configureRealm() {
         if let _ = SyncUser.current {
             self.mockInit()
         } else {
@@ -60,11 +64,6 @@ class ViewControllerVC: UIViewController {
             })
             self.present(alertController, animated: true, completion: nil)
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
     }
     
     private func mockInit() {
@@ -125,7 +124,7 @@ extension ViewControllerVC: FinderTVCellDelegate {
     func finderTVCellDelegateDidSelectFinder(_ finder: Finder) {
         self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
         
-        let giftFinderDTO = GiftFinderDTO(products: self.getProducts(self.items), finders: self.getFinders())
+        let giftFinderDTO = GiftFinderDTO(products: self.getProducts(self.items), finders: self.viewModel.giftFinderDTO.value.finders!)
         if finder.name == "Men" {
             giftFinderDTO.products = self.getProducts(self.items).filter { $0.sectionType == 1 }
         } else if finder.name == "Woman" {
@@ -133,5 +132,20 @@ extension ViewControllerVC: FinderTVCellDelegate {
         }
         
         self.viewModel.giftFinderDTO.value = giftFinderDTO
+    }
+    
+    func finderTVCellDelegateDidSelectCategory() {
+        self.performSegue(withIdentifier: "showFilterSegue", sender: true)
+    }
+    func finderTVCellDelegateDidSelectPrice() {
+        self.performSegue(withIdentifier: "showFilterSegue", sender: false)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFilterSegue" {
+            if let destinationVC = segue.destination as? FilterViewController, let filterCategory = sender as? Bool {
+                destinationVC.filterTypeCategory = filterCategory
+            }
+        }
     }
 }

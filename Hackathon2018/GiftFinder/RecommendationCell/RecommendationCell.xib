@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4yn-Nh-ueQ">
-                        <rect key="frame" x="0.0" y="0.0" width="593" height="296.5"/>
+                        <rect key="frame" x="10" y="10" width="573" height="276.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="trX-6a-TOm">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
@@ -30,7 +30,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rnr-1r-HlY">
-                                <rect key="frame" x="135" y="0.0" width="458" height="235"/>
+                                <rect key="frame" x="135" y="0.0" width="438" height="235"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dde-lr-i9l">
                                         <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
@@ -89,7 +89,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Lei " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-g0-34R">
                                                 <rect key="frame" x="0.0" y="128" width="80.5" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                                <color key="textColor" red="0.94117647059999998" green="0.15686274510000001" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.16078431372549018" green="0.55686274509803924" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -100,10 +100,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="4yn-Nh-ueQ" secondAttribute="trailing" id="4ZD-8J-o0D"/>
-                    <constraint firstAttribute="bottom" secondItem="4yn-Nh-ueQ" secondAttribute="bottom" id="Exp-DI-Eea"/>
-                    <constraint firstItem="4yn-Nh-ueQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tAi-jL-I22"/>
-                    <constraint firstItem="4yn-Nh-ueQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xml-KY-jju"/>
+                    <constraint firstAttribute="trailing" secondItem="4yn-Nh-ueQ" secondAttribute="trailing" constant="10" id="4ZD-8J-o0D"/>
+                    <constraint firstAttribute="bottom" secondItem="4yn-Nh-ueQ" secondAttribute="bottom" constant="10" id="Exp-DI-Eea"/>
+                    <constraint firstItem="4yn-Nh-ueQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tAi-jL-I22"/>
+                    <constraint firstItem="4yn-Nh-ueQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xml-KY-jju"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

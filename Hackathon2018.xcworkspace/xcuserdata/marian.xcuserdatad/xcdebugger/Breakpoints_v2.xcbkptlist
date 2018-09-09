@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hackathon2018/GiftFinder/ViewController.swift"
-            timestampString = "558138941.428594"
+            timestampString = "558158540.103043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "mockInit()"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hackathon2018/GiftFinder/ViewController.swift"
-            timestampString = "558138941.429106"
+            timestampString = "558158540.103874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "finderTVCellDelegateDidSelectFinder(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,12 +154,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hackathon2018/GiftFinder/ViewController.swift"
-            timestampString = "558138941.42937"
+            timestampString = "558158540.104643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "finderTVCellDelegateDidSelectFinder(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hackathon2018.ViewControllerVC.finderTVCellDelegateDidSelectFinder(Hackathon2018.Finder) -&gt; ()"
+                  moduleName = "Hackathon2018"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian/Desktop/Hackathon2018/Hackathon2018/GiftFinder/ViewController.swift"
+                  timestampString = "558158306.338783"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1732">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Hackathon2018.Product) -&gt; Swift.Bool in Hackathon2018.ViewControllerVC.finderTVCellDelegateDidSelectFinder(Hackathon2018.Finder) -&gt; ()"
+                  moduleName = "Hackathon2018"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian/Desktop/Hackathon2018/Hackathon2018/GiftFinder/ViewController.swift"
+                  timestampString = "558158306.34075"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hackathon2018/GiftFinder/ViewController.swift"
+            timestampString = "558158540.105263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "finderTVCellDelegateDidSelectFinder(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hackathon2018.ViewControllerVC.finderTVCellDelegateDidSelectFinder(Hackathon2018.Finder) -&gt; ()"
+                  moduleName = "Hackathon2018"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian/Desktop/Hackathon2018/Hackathon2018/GiftFinder/ViewController.swift"
+                  timestampString = "558158306.348299"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "1213">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Hackathon2018.Product) -&gt; Swift.Bool in Hackathon2018.ViewControllerVC.finderTVCellDelegateDidSelectFinder(Hackathon2018.Finder) -&gt; ()"
+                  moduleName = "Hackathon2018"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian/Desktop/Hackathon2018/Hackathon2018/GiftFinder/ViewController.swift"
+                  timestampString = "558158306.350379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hackathon2018/GiftFinder/ViewController.swift"
+            timestampString = "558158540.105898"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "finderTVCellDelegateDidSelectPrice()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,12 +266,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hackathon2018/GiftFinder/ViewController.swift"
-            timestampString = "558138941.4296761"
+            timestampString = "558158540.106501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "finderTVCellDelegateDidSelectFinder(_:)"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "finderTVCellDelegateDidSelectCategory()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

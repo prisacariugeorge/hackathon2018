@@ -20,9 +20,9 @@ class RecommendationCell: UITableViewCell {
         self.titleLabel.text = product.productName
         self.productImageView.image = UIImage(data: product.imageData)
         self.ratingImageView.image = self.getRatingImage(product.rating)
-        self.oldPrice.text = String(product.oldPrice)
+        self.oldPrice.text = String(product.oldPrice) + " Lei"
         
-        self.currentPrice.text = String(product.currentPrice)
+        self.currentPrice.text = String(product.currentPrice) + " Lei"
         self.deliveryEstimate.text = product.deliveryEstimate
     }
     

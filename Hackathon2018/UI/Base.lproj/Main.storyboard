@@ -35,11 +35,46 @@
                     <navigationItem key="navigationItem" title="Find the perfect gift" id="WgQ-Px-Ruf"/>
                     <connections>
                         <outlet property="tableView" destination="db4-2p-RcK" id="WAG-Fb-ABm"/>
+                        <segue destination="lMH-Qe-4fW" kind="show" identifier="showFilterSegue" id="b44-bj-cp7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="49.925037481259373"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="bTn-Gh-k4K">
+            <objects>
+                <viewController id="lMH-Qe-4fW" customClass="FilterViewController" customModule="Hackathon2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PyO-Id-G9U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dV7-Dq-vp0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lMH-Qe-4fW" id="7UY-iO-N37"/>
+                                    <outlet property="delegate" destination="lMH-Qe-4fW" id="aoU-HX-Lro"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dXg-l8-hoS" firstAttribute="bottom" secondItem="dV7-Dq-vp0" secondAttribute="bottom" id="As7-Pc-rhh"/>
+                            <constraint firstItem="dV7-Dq-vp0" firstAttribute="top" secondItem="dXg-l8-hoS" secondAttribute="top" id="Qt1-Ug-DB4"/>
+                            <constraint firstItem="dV7-Dq-vp0" firstAttribute="leading" secondItem="dXg-l8-hoS" secondAttribute="leading" id="oGR-kL-WgZ"/>
+                            <constraint firstItem="dXg-l8-hoS" firstAttribute="trailing" secondItem="dV7-Dq-vp0" secondAttribute="trailing" id="qRl-d8-ebD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dXg-l8-hoS"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dV7-Dq-vp0" id="uIz-1G-fGb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysN-FF-xcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="50"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="maG-3T-VeS">
