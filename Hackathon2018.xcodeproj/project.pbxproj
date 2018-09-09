@@ -108,13 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				564E1B452144158000FFC7B3 /* AppDelegate */,
-				564E1B462144158E00FFC7B3 /* GiftFinder */,
 				564E1B432144156A00FFC7B3 /* Data */,
+				56C32A7F2144D804009A2794 /* Favorite */,
+				564E1B462144158E00FFC7B3 /* GiftFinder */,
 				564E1B442144157700FFC7B3 /* UI */,
 				564E1B30214405DA00FFC7B3 /* Info.plist */,
-				564E1B522144408800FFC7B3 /* Reusable.swift */,
-				564E1B542144571700FFC7B3 /* Constants.swift */,
-				56C32A7F2144D804009A2794 /* Favorite */,
 			);
 			path = Hackathon2018;
 			sourceTree = "<group>";
@@ -131,8 +129,10 @@
 		564E1B432144156A00FFC7B3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				564E1B412144137900FFC7B3 /* MockData.swift */,
 				564E1B3F214411D600FFC7B3 /* Classes.swift */,
+				564E1B542144571700FFC7B3 /* Constants.swift */,
+				564E1B412144137900FFC7B3 /* MockData.swift */,
+				564E1B522144408800FFC7B3 /* Reusable.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -158,29 +158,19 @@
 		564E1B462144158E00FFC7B3 /* GiftFinder */ = {
 			isa = PBXGroup;
 			children = (
-				564E1B26214405D800FFC7B3 /* ViewController.swift */,
 				56C32A782144D30A009A2794 /* Cells */,
-				564E1B362144097F00FFC7B3 /* GiftFinderVM.swift */,
 				56C32A762144CE57009A2794 /* FilterViewController.swift */,
+				564E1B362144097F00FFC7B3 /* GiftFinderVM.swift */,
+				564E1B26214405D800FFC7B3 /* ViewController.swift */,
 			);
 			path = GiftFinder;
-			sourceTree = "<group>";
-		};
-		564E1B47214418C000FFC7B3 /* FinderCell */ = {
-			isa = PBXGroup;
-			children = (
-				564E1B4A214418E900FFC7B3 /* FinderTVCell.swift */,
-				564E1B4B214418E900FFC7B3 /* FinderTVCell.xib */,
-				564E1B4E21441CF200FFC7B3 /* FinderCVCell.swift */,
-				564E1B4F21441CF200FFC7B3 /* FinderCVCell.xib */,
-			);
-			path = FinderCell;
 			sourceTree = "<group>";
 		};
 		56C32A782144D30A009A2794 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				564E1B47214418C000FFC7B3 /* FinderCell */,
+				56C32A8D2144F89A009A2794 /* FinderCVCell */,
+				56C32A8C2144F88F009A2794 /* FinderTVCell */,
 				564E1B3C21440CEB00FFC7B3 /* RecommendationCell */,
 			);
 			path = Cells;
@@ -198,14 +188,56 @@
 		56C32A802144D817009A2794 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				56C32A892144F848009A2794 /* FavoriteBannerCell */,
+				56C32A8B2144F85C009A2794 /* FriendsCell */,
+				56C32A8A2144F851009A2794 /* WishlistTabCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		56C32A892144F848009A2794 /* FavoriteBannerCell */ = {
+			isa = PBXGroup;
+			children = (
 				56C32A7B2144D42E009A2794 /* FavoriteBannerCell.swift */,
 				56C32A7C2144D42E009A2794 /* FavoriteBannerCell.xib */,
+			);
+			path = FavoriteBannerCell;
+			sourceTree = "<group>";
+		};
+		56C32A8A2144F851009A2794 /* WishlistTabCell */ = {
+			isa = PBXGroup;
+			children = (
 				56C32A812144D848009A2794 /* WishlistTabCell.swift */,
 				56C32A822144D848009A2794 /* WishlistTabCell.xib */,
+			);
+			path = WishlistTabCell;
+			sourceTree = "<group>";
+		};
+		56C32A8B2144F85C009A2794 /* FriendsCell */ = {
+			isa = PBXGroup;
+			children = (
 				56C32A852144D868009A2794 /* FriendsCell.swift */,
 				56C32A862144D868009A2794 /* FriendsCell.xib */,
 			);
-			path = Cells;
+			path = FriendsCell;
+			sourceTree = "<group>";
+		};
+		56C32A8C2144F88F009A2794 /* FinderTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				564E1B4A214418E900FFC7B3 /* FinderTVCell.swift */,
+				564E1B4B214418E900FFC7B3 /* FinderTVCell.xib */,
+			);
+			path = FinderTVCell;
+			sourceTree = "<group>";
+		};
+		56C32A8D2144F89A009A2794 /* FinderCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				564E1B4E21441CF200FFC7B3 /* FinderCVCell.swift */,
+				564E1B4F21441CF200FFC7B3 /* FinderCVCell.xib */,
+			);
+			path = FinderCVCell;
 			sourceTree = "<group>";
 		};
 		69DDF1C5B8B0FAB439E641D2 /* Pods */ = {

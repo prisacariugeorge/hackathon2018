@@ -8,11 +8,4 @@
 
 import UIKit
 
-class FavoriteBannerCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-}
+class FavoriteBannerCell: UITableViewCell { }

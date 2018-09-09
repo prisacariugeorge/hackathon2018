@@ -8,5 +8,4 @@
 
 import UIKit
 
-class WishlistTabCell: UITableViewCell {
-}
+class WishlistTabCell: UITableViewCell { }

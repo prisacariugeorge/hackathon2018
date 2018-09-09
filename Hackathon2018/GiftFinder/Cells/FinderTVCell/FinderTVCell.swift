@@ -27,7 +27,6 @@ class FinderTVCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.collectionView.registerReusable(withClass: FinderCVCell.self, fromNib: true)
-        
     }
     
     public func setupWithFinders(_ finders: [Finder]) {
