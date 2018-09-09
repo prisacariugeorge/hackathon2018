@@ -23,20 +23,14 @@ class Product: Object {
     dynamic var sectionType: Int = 0
     dynamic var categoryType: Int = 0
     
-    
     override static func primaryKey() -> String? {
         return "itemId"
     }
 }
 
-class ProductCategory: Object {
-    @objc dynamic var itemId: String = UUID().uuidString
-    @objc dynamic var categoryName: String = ""
-    @objc dynamic var type: Int = 1
-    
-    override static func primaryKey() -> String? {
-        return "itemId"
-    }
+class FilterItem: NSObject {
+    var name: String = ""
+    var type: Int = 0
 }
 
 class Recommendation: NSObject {

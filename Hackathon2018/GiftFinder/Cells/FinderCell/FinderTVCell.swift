@@ -27,16 +27,21 @@ class FinderTVCell: UITableViewCell {
         
     }
     
-    func setupWithFinders(_ finders: [Finder]) {
+    public func setupWithFinders(_ finders: [Finder]) {
         self.finders = finders
         self.collectionView.reloadData()
     }
     
     @IBAction func categoryButtonPressed(_ sender: Any) {
-        self.delegate?.finderTVCellDelegateDidSelectCategory!()
+        if self.delegate?.finderTVCellDelegateDidSelectCategory != nil {
+            self.delegate?.finderTVCellDelegateDidSelectCategory!()
+        }
+        
     }
     @IBAction func priceButtonPressed(_ sender: Any) {
-        self.delegate?.finderTVCellDelegateDidSelectPrice!()
+        if self.delegate?.finderTVCellDelegateDidSelectPrice != nil {
+            self.delegate?.finderTVCellDelegateDidSelectPrice!()
+        }
     }
 }
 

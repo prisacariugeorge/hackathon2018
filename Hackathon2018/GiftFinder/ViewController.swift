@@ -145,7 +145,36 @@ extension ViewControllerVC: FinderTVCellDelegate {
         if segue.identifier == "showFilterSegue" {
             if let destinationVC = segue.destination as? FilterViewController, let filterCategory = sender as? Bool {
                 destinationVC.filterTypeCategory = filterCategory
+                destinationVC.delegate = self
             }
         }
+    }
+}
+
+extension ViewControllerVC: FilterViewControllerDelegate {
+    func filterViewControllerDelegateDidSelectItem(_ filterItem: FilterItem) {
+        //        price100.name = "0 Lei - 100 Lei"
+        //        price0.type = 7
+
+//        price100.name = "100 Lei - 200 Lei"
+//        price100.type = 8
+        
+//        price200.name = "200 Lei +"
+//        price200.type = 9
+        self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
+        
+        let giftFinderDTO = GiftFinderDTO(products: mockProducts(self.items), finders: self.viewModel.giftFinderDTO.value.finders!)
+        switch filterItem.type {
+        case 7:
+            giftFinderDTO.products = mockProducts(self.items).filter { $0.currentPrice < 101 }
+        case 8:
+            giftFinderDTO.products = mockProducts(self.items).filter { $0.currentPrice < 201 && $0.currentPrice > 100 }
+        case 9:
+            giftFinderDTO.products = mockProducts(self.items).filter { $0.currentPrice > 200 }
+        default:
+            break
+        }
+        
+        self.viewModel.giftFinderDTO.value = giftFinderDTO
     }
 }

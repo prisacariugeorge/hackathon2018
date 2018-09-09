@@ -52,7 +52,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="delivery" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7F-mv-6yW" userLabel="deliveryEstimate">
                                         <rect key="frame" x="0.0" y="55.5" width="59" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="0.072599816177904411" green="0.86530005931854248" blue="0.11185586997877627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.10196078431372549" green="0.66274509803921566" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Beq-9g-Y3Y" userLabel="priceStackView">
@@ -69,9 +69,9 @@
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZI-sd-gfz">
                                                         <rect key="frame" x="3" y="63" width="234" height="2"/>
-                                                        <color key="backgroundColor" white="0.87537202380000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="2" id="C4W-hN-FXQ"/>
+                                                            <constraint firstAttribute="height" constant="1.5" id="C4W-hN-FXQ"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>

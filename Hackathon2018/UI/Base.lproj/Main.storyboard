@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXw-Fi-vAK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="35" width="375" height="632"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="L3p-LN-Br7" id="ksk-Xv-7jo"/>
@@ -29,7 +29,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jXw-Fi-vAK" firstAttribute="top" secondItem="LaO-Ck-pdS" secondAttribute="top" id="0Eh-Ml-L6Q"/>
+                            <constraint firstItem="jXw-Fi-vAK" firstAttribute="top" secondItem="LaO-Ck-pdS" secondAttribute="top" constant="15" id="0Eh-Ml-L6Q"/>
                             <constraint firstItem="LaO-Ck-pdS" firstAttribute="bottom" secondItem="jXw-Fi-vAK" secondAttribute="bottom" id="TXX-XN-oWo"/>
                             <constraint firstItem="jXw-Fi-vAK" firstAttribute="leading" secondItem="LaO-Ck-pdS" secondAttribute="leading" id="nvO-Cv-Hgk"/>
                             <constraint firstItem="LaO-Ck-pdS" firstAttribute="trailing" secondItem="jXw-Fi-vAK" secondAttribute="trailing" id="rEL-jG-aAo"/>

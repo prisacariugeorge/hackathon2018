@@ -25,17 +25,26 @@ class FavoriteViewController: UIViewController {
 }
 
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 8
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.count
     }
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.white
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if dataSource[indexPath.row] == "FavoriteBannerCell" {
+        if dataSource[indexPath.section] == "FavoriteBannerCell" {
             if let cell = self.tableView.dequeueReusableCell(withIdentifier: "FavoriteBannerCell", for: indexPath) as? FavoriteBannerCell {
                 return cell
             } else {
                 return UITableViewCell()
             }
-        } else if dataSource[indexPath.row] == "FinderTVCell" {
+        } else if dataSource[indexPath.section] == "FinderTVCell" {
             if let cell = self.tableView.dequeueReusableCell(withIdentifier: "FinderTVCell", for: indexPath) as? FinderTVCell {
                 cell.setupWithFinders(mockFinders())
                 cell.delegate = self
@@ -43,13 +52,13 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
             } else {
                 return UITableViewCell()
             }
-        } else if dataSource[indexPath.row] == "WishlistTabCell" {
+        } else if dataSource[indexPath.section] == "WishlistTabCell" {
             if let cell = self.tableView.dequeueReusableCell(withIdentifier: "WishlistTabCell", for: indexPath) as? WishlistTabCell {
                 return cell
             } else {
                 return UITableViewCell()
             }
-        } else if dataSource[indexPath.row] == "FriendsCell" {
+        } else if dataSource[indexPath.section] == "FriendsCell" {
             if let cell = self.tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as? FriendsCell {
                 return cell
             } else {
