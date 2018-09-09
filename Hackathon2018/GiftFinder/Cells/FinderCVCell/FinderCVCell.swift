@@ -17,6 +17,6 @@ class FinderCVCell: UICollectionViewCell {
     public func setupWithFinder(_ finder: Finder) {
         self.finderImage.image = finder.image
         self.finderName.text = finder.name
-        self.imageConstraintHeight.constant = finder.enlarge ? 70 : 60
+        self.imageConstraintHeight.constant = finder.enlarge ? 75 : 60
     }
 }
