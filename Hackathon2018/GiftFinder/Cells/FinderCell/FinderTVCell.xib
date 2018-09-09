@@ -92,7 +92,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0ME-Lm-JMa"/>
                                         </constraints>
-                                        <state key="normal" title="Categories (6)"/>
+                                        <state key="normal" title="Categories"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                                 <integer key="value" value="5"/>
@@ -105,7 +105,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-wu-WpU">
                                         <rect key="frame" x="320.5" y="0.0" width="290.5" height="25"/>
                                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="100-500 Lei"/>
+                                        <state key="normal" title="Price"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                                 <integer key="value" value="5"/>
@@ -141,6 +141,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="FxP-2D-6qs" id="i1K-Fy-Qvv"/>
+                <outlet property="filterView" destination="IMA-qr-xQb" id="MKv-NX-kAK"/>
             </connections>
             <point key="canvasLocation" x="151" y="150"/>
         </tableViewCell>

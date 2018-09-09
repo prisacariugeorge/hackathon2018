@@ -17,6 +17,7 @@ import UIKit
 class FinderTVCell: UITableViewCell {
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet var filterView: UIView!
     var finders: [Finder] = []
     
     var delegate: FinderTVCellDelegate?

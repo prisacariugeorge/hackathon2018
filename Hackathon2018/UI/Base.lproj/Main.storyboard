@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L3p-LN-Br7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="saI-s7-H7A">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXw-Fi-vAK">
-                                <rect key="frame" x="0.0" y="35" width="375" height="632"/>
+                                <rect key="frame" x="0.0" y="79" width="375" height="588"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="L3p-LN-Br7" id="ksk-Xv-7jo"/>
@@ -36,14 +36,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LaO-Ck-pdS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qh3-Qv-ngw"/>
                     <connections>
                         <outlet property="tableView" destination="jXw-Fi-vAK" id="UUa-DJ-79F"/>
-                        <segue destination="4xn-eN-mWW" kind="show" identifier="showGiftFinderSegue" id="beK-OZ-j8H"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showGiftFinderSegue" id="l4f-5l-ni3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cy-Eh-Ip3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-761" y="-63"/>
+            <point key="canvasLocation" x="783" y="-63"/>
         </scene>
         <!--Find the perfect gift-->
         <scene sceneID="tne-QT-ifu">
@@ -75,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="-63"/>
+            <point key="canvasLocation" x="1896.8" y="-63.418290854572717"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="bTn-Gh-k4K">
@@ -109,25 +110,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysN-FF-xcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="-63"/>
+            <point key="canvasLocation" x="2848.8000000000002" y="-63.418290854572717"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="maG-3T-VeS">
+        <scene sceneID="gE5-bH-o3n">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4xn-eN-mWW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="saI-s7-H7A" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qut-ed-EUh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Sv-SL-s0J">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S5h-GO-KAA"/>
+                        <segue destination="L3p-LN-Br7" kind="relationship" relationship="rootViewController" id="5Tf-7i-IqP"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6lA-PN-Ers" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEz-0l-xJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="-63"/>
+            <point key="canvasLocation" x="-294" y="-63"/>
         </scene>
     </scenes>
 </document>

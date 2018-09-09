@@ -22,6 +22,10 @@ class FavoriteViewController: UIViewController {
         self.tableView.register(UINib(nibName: "WishlistTabCell", bundle: nil), forCellReuseIdentifier: "WishlistTabCell")
         self.tableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "FriendsCell")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.navigationController?.isNavigationBarHidden = true
+    }
 }
 
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
@@ -48,6 +52,7 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
             if let cell = self.tableView.dequeueReusableCell(withIdentifier: "FinderTVCell", for: indexPath) as? FinderTVCell {
                 cell.setupWithFinders(mockFinders())
                 cell.delegate = self
+                cell.filterView.isHidden = true
                 return cell
             } else {
                 return UITableViewCell()

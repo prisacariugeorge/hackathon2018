@@ -72,7 +72,7 @@ class ViewControllerVC: UIViewController {
         self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
         
         let giftFinderDTO = GiftFinderDTO(products: mockProducts(self.items), finders: mockFinders())
-        var viewModel = GiftFinderVM(giftFinderDTO: giftFinderDTO)
+        let viewModel = GiftFinderVM(giftFinderDTO: giftFinderDTO)
         self.viewModel = viewModel
         
         self.viewModel.dataSource
@@ -113,6 +113,7 @@ extension ViewControllerVC {
         if let cell = self.tableView.dequeueReusableCell(withIdentifier: "FinderTVCell", for: indexPath) as? FinderTVCell {
             cell.setupWithFinders(finders)
             cell.delegate = self
+            cell.filterView.isHidden = false
             return cell
         } else {
             return UITableViewCell()
