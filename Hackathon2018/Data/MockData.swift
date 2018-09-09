@@ -83,12 +83,12 @@ func mockCategory() -> [FilterItem] {
     
     let categoryJewellery = FilterItem()
     categoryJewellery.name = "Jewellery"
-    categoryJewellery.type = 1
+    categoryJewellery.type = 5
     returnCategories.append(categoryJewellery)
     
     let categoryPurses = FilterItem()
     categoryPurses.name = "Purses"
-    categoryPurses.type = 3
+    categoryPurses.type = 6
     returnCategories.append(categoryPurses)
     
     return returnCategories

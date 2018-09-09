@@ -22,7 +22,8 @@ class ViewControllerVC: UIViewController {
     
     var realm: Realm? = nil
     var items: Results<Product>? = nil
-    var selectedFilterItem: FilterItem? = nil
+    var selectedPriceItem: FilterItem? = nil
+    var selectedCategoryItem: FilterItem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +116,7 @@ extension ViewControllerVC {
             cell.setupWithFinders(finders)
             cell.delegate = self
             cell.filterView.isHidden = false
-            cell.setSelectedItem(self.selectedFilterItem)
+            cell.setSelectedItem(price: self.selectedPriceItem, category: self.selectedCategoryItem)
             return cell
         } else {
             return UITableViewCell()
@@ -126,6 +127,9 @@ extension ViewControllerVC {
 extension ViewControllerVC: FinderTVCellDelegate {
     func finderTVCellDelegateDidSelectFinder(_ finder: Finder) {
         self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
+        
+        self.selectedPriceItem = nil
+        self.selectedCategoryItem = nil
         
         let giftFinderDTO = GiftFinderDTO(products: mockProducts(self.items), finders: self.viewModel.giftFinderDTO.value.finders!)
         if finder.name == "Men" {
@@ -162,28 +166,85 @@ extension ViewControllerVC: FilterViewControllerDelegate {
         switch filterItem.type {
         case 1:
             giftFinderDTO.products = mockProducts(self.items).filter { $0.categoryType == 1 }
+            self.selectedCategoryItem = filterItem
+            self.updateFilterPrice(giftFinderDTO)
         case 2:
             giftFinderDTO.products = mockProducts(self.items).filter { $0.categoryType == 2 }
+            self.selectedCategoryItem = filterItem
+            self.updateFilterPrice(giftFinderDTO)
         case 3:
             giftFinderDTO.products = mockProducts(self.items).filter { $0.categoryType == 3 }
+            self.selectedCategoryItem = filterItem
+            self.updateFilterPrice(giftFinderDTO)
         case 4:
             giftFinderDTO.products = mockProducts(self.items).filter { $0.categoryType == 4 }
+            self.selectedCategoryItem = filterItem
+            self.updateFilterPrice(giftFinderDTO)
         case 5:
             giftFinderDTO.products = mockProducts(self.items).filter { $0.categoryType == 5 }
+            self.selectedCategoryItem = filterItem
+            self.updateFilterPrice(giftFinderDTO)
         case 6:
-            giftFinderDTO.products = mockProducts(self.items).filter { $0.categoryType == 3 }
+            giftFinderDTO.products = mockProducts(self.items).filter { $0.categoryType == 6 }
+            self.selectedCategoryItem = filterItem
+            self.updateFilterPrice(giftFinderDTO)
         case 7:
             giftFinderDTO.products = mockProducts(self.items).filter { $0.currentPrice < 101 }
+            self.selectedPriceItem = filterItem
+                self.updateFilterCategory(giftFinderDTO)
         case 8:
             giftFinderDTO.products = mockProducts(self.items).filter { $0.currentPrice < 201 && $0.currentPrice > 100 }
+            self.selectedPriceItem = filterItem
+            self.updateFilterCategory(giftFinderDTO)
         case 9:
             giftFinderDTO.products = mockProducts(self.items).filter { $0.currentPrice > 200 }
+            self.selectedPriceItem = filterItem
+            self.updateFilterCategory(giftFinderDTO)
         default:
             break
         }
         
-        self.selectedFilterItem = filterItem
-        
         self.viewModel.giftFinderDTO.value = giftFinderDTO
+    }
+    
+    func updateFilterCategory(_ giftFinderDTO: GiftFinderDTO) {
+        if self.selectedCategoryItem != nil {
+            switch self.selectedCategoryItem!.type {
+            case 1:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.categoryType == 1 }
+                
+            case 2:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.categoryType == 2 }
+                
+            case 3:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.categoryType == 3 }
+                
+            case 4:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.categoryType == 4 }
+                
+            case 5:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.categoryType == 5 }
+                
+            case 6:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.categoryType == 6 }
+            default:
+                break
+            }
+        }
+    }
+    
+    func updateFilterPrice(_ giftFinderDTO: GiftFinderDTO) {
+        if self.selectedPriceItem != nil {
+            switch self.selectedPriceItem!.type {
+            case 7:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.currentPrice < 101 }
+            case 8:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.currentPrice < 201 && $0.currentPrice > 100 }
+            case 9:
+                giftFinderDTO.products = giftFinderDTO.products?.filter { $0.currentPrice > 200 }
+            default:
+                break
+            }
+        }
     }
 }

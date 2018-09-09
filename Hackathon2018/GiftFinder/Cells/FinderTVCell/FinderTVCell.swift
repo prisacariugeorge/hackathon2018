@@ -33,19 +33,17 @@ class FinderTVCell: UITableViewCell {
         self.finders = finders
         self.collectionView.reloadData()
     }
-    
-    public func setSelectedItem(_ filterItem: FilterItem?) {
-        if let filterItem = filterItem {
-            if filterItem.type == 7 || filterItem.type == 8 || filterItem.type == 9 {
-                self.priceButton.setTitle(filterItem.name, for: .normal)
-                self.categoryButton.setTitle("Categories", for: .normal)
-            } else if filterItem.type > 0 && filterItem.type < 7 {
-                self.priceButton.setTitle("Price", for: .normal)
-                self.categoryButton.setTitle(filterItem.name, for: .normal)
-            } else {
-                self.priceButton.setTitle("Price", for: .normal)
-                self.categoryButton.setTitle("Categories", for: .normal)
-            }
+    public func setSelectedItem(price: FilterItem?, category: FilterItem?) {
+        if price != nil {
+            self.priceButton.setTitle(price!.name, for: .normal)
+        } else {
+            self.priceButton.setTitle("Price", for: .normal)
+        }
+        
+        if category != nil {
+            self.categoryButton.setTitle(category!.name, for: .normal)
+        } else {
+            self.categoryButton.setTitle("Categories", for: .normal)
         }
     }
     
