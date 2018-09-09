@@ -140,8 +140,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="categoryButton" destination="08s-mH-LJC" id="MGB-HE-tdT"/>
                 <outlet property="collectionView" destination="FxP-2D-6qs" id="i1K-Fy-Qvv"/>
                 <outlet property="filterView" destination="IMA-qr-xQb" id="MKv-NX-kAK"/>
+                <outlet property="priceButton" destination="Gox-wu-WpU" id="acQ-lv-QAH"/>
             </connections>
             <point key="canvasLocation" x="151" y="150"/>
         </tableViewCell>

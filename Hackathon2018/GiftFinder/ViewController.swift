@@ -22,6 +22,7 @@ class ViewControllerVC: UIViewController {
     
     var realm: Realm? = nil
     var items: Results<Product>? = nil
+    var selectedFilterItem: FilterItem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,6 +115,7 @@ extension ViewControllerVC {
             cell.setupWithFinders(finders)
             cell.delegate = self
             cell.filterView.isHidden = false
+            cell.setSelectedItem(self.selectedFilterItem)
             return cell
         } else {
             return UITableViewCell()
@@ -179,6 +181,8 @@ extension ViewControllerVC: FilterViewControllerDelegate {
         default:
             break
         }
+        
+        self.selectedFilterItem = filterItem
         
         self.viewModel.giftFinderDTO.value = giftFinderDTO
     }
