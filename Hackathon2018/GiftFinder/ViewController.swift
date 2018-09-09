@@ -71,7 +71,7 @@ class ViewControllerVC: UIViewController {
         self.realm = try? Realm(configuration: Realm.Configuration(syncConfiguration: syncConfig, objectTypes:[Product.self]))
         self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
         
-        let giftFinderDTO = GiftFinderDTO(products: self.getProducts(self.items), finders: self.getFinders())
+        let giftFinderDTO = GiftFinderDTO(products: mockProducts(self.items), finders: mockFinders())
         var viewModel = GiftFinderVM(giftFinderDTO: giftFinderDTO)
         self.viewModel = viewModel
         
@@ -124,11 +124,11 @@ extension ViewControllerVC: FinderTVCellDelegate {
     func finderTVCellDelegateDidSelectFinder(_ finder: Finder) {
         self.items = realm?.objects(Product.self).sorted(byKeyPath: "timestamp", ascending: false)
         
-        let giftFinderDTO = GiftFinderDTO(products: self.getProducts(self.items), finders: self.viewModel.giftFinderDTO.value.finders!)
+        let giftFinderDTO = GiftFinderDTO(products: mockProducts(self.items), finders: self.viewModel.giftFinderDTO.value.finders!)
         if finder.name == "Men" {
-            giftFinderDTO.products = self.getProducts(self.items).filter { $0.sectionType == 1 }
+            giftFinderDTO.products = mockProducts(self.items).filter { $0.sectionType == 1 }
         } else if finder.name == "Woman" {
-            giftFinderDTO.products = self.getProducts(self.items).filter { $0.sectionType == 2 }
+            giftFinderDTO.products = mockProducts(self.items).filter { $0.sectionType == 2 }
         }
         
         self.viewModel.giftFinderDTO.value = giftFinderDTO

@@ -6,10 +6,10 @@
 //  Copyright © 2018 Marian Prisacariu. All rights reserved.
 //
 
-protocol FinderTVCellDelegate {
+@objc protocol FinderTVCellDelegate {
     func finderTVCellDelegateDidSelectFinder(_ finder: Finder)
-    func finderTVCellDelegateDidSelectCategory()
-    func finderTVCellDelegateDidSelectPrice()
+    @objc optional func finderTVCellDelegateDidSelectCategory()
+    @objc optional func finderTVCellDelegateDidSelectPrice()
 }
 
 import UIKit
@@ -33,10 +33,10 @@ class FinderTVCell: UITableViewCell {
     }
     
     @IBAction func categoryButtonPressed(_ sender: Any) {
-        self.delegate?.finderTVCellDelegateDidSelectCategory()
+        self.delegate?.finderTVCellDelegateDidSelectCategory!()
     }
     @IBAction func priceButtonPressed(_ sender: Any) {
-        self.delegate?.finderTVCellDelegateDidSelectPrice()
+        self.delegate?.finderTVCellDelegateDidSelectPrice!()
     }
 }
 

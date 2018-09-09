@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 import RealmSwift
 
-extension ViewControllerVC {
-    func getProducts(_ products: Results<Product>?) -> [Product] {
+    func mockProducts(_ products: Results<Product>?) -> [Product] {
         var returnProducts = [Product]()
         var productsRec = [Product]()
         if let products = products {
@@ -23,7 +22,7 @@ extension ViewControllerVC {
         return returnProducts
     }
     
-    func getFinders() -> [Finder] {
+    func mockFinders() -> [Finder] {
         var returnFinders = [Finder]()
         
         let finder1 = Finder()
@@ -63,4 +62,4 @@ extension ViewControllerVC {
         
         return returnFinders
     }
-}
+

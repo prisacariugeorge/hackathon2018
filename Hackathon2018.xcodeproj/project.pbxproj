@@ -24,6 +24,13 @@
 		564E1B532144408800FFC7B3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B522144408800FFC7B3 /* Reusable.swift */; };
 		564E1B552144571700FFC7B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1B542144571700FFC7B3 /* Constants.swift */; };
 		56C32A772144CE57009A2794 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C32A762144CE57009A2794 /* FilterViewController.swift */; };
+		56C32A7A2144D343009A2794 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C32A792144D343009A2794 /* FavoriteViewController.swift */; };
+		56C32A7D2144D42E009A2794 /* FavoriteBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C32A7B2144D42E009A2794 /* FavoriteBannerCell.swift */; };
+		56C32A7E2144D42E009A2794 /* FavoriteBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56C32A7C2144D42E009A2794 /* FavoriteBannerCell.xib */; };
+		56C32A832144D848009A2794 /* WishlistTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C32A812144D848009A2794 /* WishlistTabCell.swift */; };
+		56C32A842144D848009A2794 /* WishlistTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56C32A822144D848009A2794 /* WishlistTabCell.xib */; };
+		56C32A872144D868009A2794 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C32A852144D868009A2794 /* FriendsCell.swift */; };
+		56C32A882144D868009A2794 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56C32A862144D868009A2794 /* FriendsCell.xib */; };
 		A143C6F06596AA43B671D788 /* Pods_Hackathon2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D5C98AB653013501853110 /* Pods_Hackathon2018.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +54,13 @@
 		564E1B522144408800FFC7B3 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		564E1B542144571700FFC7B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56C32A762144CE57009A2794 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		56C32A792144D343009A2794 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		56C32A7B2144D42E009A2794 /* FavoriteBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBannerCell.swift; sourceTree = "<group>"; };
+		56C32A7C2144D42E009A2794 /* FavoriteBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteBannerCell.xib; sourceTree = "<group>"; };
+		56C32A812144D848009A2794 /* WishlistTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTabCell.swift; sourceTree = "<group>"; };
+		56C32A822144D848009A2794 /* WishlistTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishlistTabCell.xib; sourceTree = "<group>"; };
+		56C32A852144D868009A2794 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		56C32A862144D868009A2794 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		8B9D991A2DA51D31611C39EC /* Pods-Hackathon2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018.debug.xcconfig"; sourceTree = "<group>"; };
 		C3D5C98AB653013501853110 /* Pods_Hackathon2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC049458C52C0F79463A2E0A /* Pods-Hackathon2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon2018/Pods-Hackathon2018.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +114,7 @@
 				564E1B30214405DA00FFC7B3 /* Info.plist */,
 				564E1B522144408800FFC7B3 /* Reusable.swift */,
 				564E1B542144571700FFC7B3 /* Constants.swift */,
+				56C32A7F2144D804009A2794 /* Favorite */,
 			);
 			path = Hackathon2018;
 			sourceTree = "<group>";
@@ -144,8 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				564E1B26214405D800FFC7B3 /* ViewController.swift */,
-				564E1B47214418C000FFC7B3 /* FinderCell */,
-				564E1B3C21440CEB00FFC7B3 /* RecommendationCell */,
+				56C32A782144D30A009A2794 /* Cells */,
 				564E1B362144097F00FFC7B3 /* GiftFinderVM.swift */,
 				56C32A762144CE57009A2794 /* FilterViewController.swift */,
 			);
@@ -161,6 +175,37 @@
 				564E1B4F21441CF200FFC7B3 /* FinderCVCell.xib */,
 			);
 			path = FinderCell;
+			sourceTree = "<group>";
+		};
+		56C32A782144D30A009A2794 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				564E1B47214418C000FFC7B3 /* FinderCell */,
+				564E1B3C21440CEB00FFC7B3 /* RecommendationCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		56C32A7F2144D804009A2794 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				56C32A802144D817009A2794 /* Cells */,
+				56C32A792144D343009A2794 /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		56C32A802144D817009A2794 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				56C32A7B2144D42E009A2794 /* FavoriteBannerCell.swift */,
+				56C32A7C2144D42E009A2794 /* FavoriteBannerCell.xib */,
+				56C32A812144D848009A2794 /* WishlistTabCell.swift */,
+				56C32A822144D848009A2794 /* WishlistTabCell.xib */,
+				56C32A852144D868009A2794 /* FriendsCell.swift */,
+				56C32A862144D868009A2794 /* FriendsCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		69DDF1C5B8B0FAB439E641D2 /* Pods */ = {
@@ -235,10 +280,13 @@
 			files = (
 				564E1B4D214418E900FFC7B3 /* FinderTVCell.xib in Resources */,
 				564E1B3B21440CE000FFC7B3 /* RecommendationCell.xib in Resources */,
+				56C32A842144D848009A2794 /* WishlistTabCell.xib in Resources */,
 				564E1B5121441CF200FFC7B3 /* FinderCVCell.xib in Resources */,
 				564E1B2F214405DA00FFC7B3 /* LaunchScreen.storyboard in Resources */,
 				564E1B2C214405DA00FFC7B3 /* Assets.xcassets in Resources */,
+				56C32A7E2144D42E009A2794 /* FavoriteBannerCell.xib in Resources */,
 				564E1B2A214405D800FFC7B3 /* Main.storyboard in Resources */,
+				56C32A882144D868009A2794 /* FriendsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,15 +362,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				564E1B3A21440CE000FFC7B3 /* RecommendationCell.swift in Sources */,
+				56C32A872144D868009A2794 /* FriendsCell.swift in Sources */,
 				564E1B422144137900FFC7B3 /* MockData.swift in Sources */,
 				564E1B40214411D600FFC7B3 /* Classes.swift in Sources */,
 				564E1B532144408800FFC7B3 /* Reusable.swift in Sources */,
+				56C32A7D2144D42E009A2794 /* FavoriteBannerCell.swift in Sources */,
 				564E1B372144097F00FFC7B3 /* GiftFinderVM.swift in Sources */,
+				56C32A832144D848009A2794 /* WishlistTabCell.swift in Sources */,
 				56C32A772144CE57009A2794 /* FilterViewController.swift in Sources */,
 				564E1B552144571700FFC7B3 /* Constants.swift in Sources */,
 				564E1B4C214418E900FFC7B3 /* FinderTVCell.swift in Sources */,
 				564E1B27214405D800FFC7B3 /* ViewController.swift in Sources */,
 				564E1B5021441CF200FFC7B3 /* FinderCVCell.swift in Sources */,
+				56C32A7A2144D343009A2794 /* FavoriteViewController.swift in Sources */,
 				564E1B25214405D800FFC7B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
