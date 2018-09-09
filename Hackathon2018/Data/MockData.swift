@@ -31,32 +31,27 @@ import RealmSwift
         returnFinders.append(finder1)
         
         let finder2 = Finder()
-        finder2.name = "Woman"
+        finder2.name = "Women"
         finder2.image = #imageLiteral(resourceName: "womanFinder")
         returnFinders.append(finder2)
         
         let finder3 = Finder()
-        finder3.name = "Young people"
+        finder3.name = "Teenagers"
         finder3.image = #imageLiteral(resourceName: "youthFinder")
         returnFinders.append(finder3)
         
         let finder4 = Finder()
-        finder4.name = "Children 8-12"
+        finder4.name = "Kids 8-12"
         finder4.image = #imageLiteral(resourceName: "copii")
         returnFinders.append(finder4)
         
         let finder5 = Finder()
-        finder5.name = "Children 4-7"
+        finder5.name = "Kids 4-7"
         finder5.image = #imageLiteral(resourceName: "children47")
         returnFinders.append(finder5)
         
-        let finder6 = Finder()
-        finder6.name = "Small children"
-        finder6.image = #imageLiteral(resourceName: "copiiMici")
-        returnFinders.append(finder6)
-        
         let finder7 = Finder()
-        finder7.name = "Baby"
+        finder7.name = "Babies"
         finder7.image = #imageLiteral(resourceName: "bebelusi")
         returnFinders.append(finder7)
         
